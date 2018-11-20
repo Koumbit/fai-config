@@ -18,7 +18,7 @@ luks - /dev/md1 - -
 luks - /dev/md2 - -
 
 disk_config lvm
-vg Base md1
-Base-Swap   swap   1G    swap sw
-Base-Root   /      1G   ext4 rw,noatime
-Base-Home   /home  2G-  ext4 rw,noatime
+vg root md1
+root-swap   swap   1G    swap sw
+root-slash   /      13G   ext4 rw,noatime
+vg data md2
