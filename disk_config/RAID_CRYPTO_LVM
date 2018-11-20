@@ -14,8 +14,8 @@ raid1   -      disk1.2,disk2.2 -    -
 raid1   -      disk1.3,disk2.3 -    -
 
 disk_config cryptsetup
-luks - /dev/md1 - -
-luks - /dev/md2 - -
+luks:"secret" - /dev/md1 - -
+luks:"secret" - /dev/md2 - -
 
 disk_config lvm
 vg root md1
