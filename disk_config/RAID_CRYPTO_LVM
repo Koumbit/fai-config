@@ -3,17 +3,19 @@
 
 disk_config disk1 disklabel:msdos bootable:1 fstabkey:uuid
 primary -      1G      -     -
-primary -      10G-      -     -
-#primary -      2G-     -     -
+primary -      15G      -     -
+primary -      2G-     -     -
 
 disk_config disk2 sameas:disk1
 
 disk_config raid
 raid1   /boot  disk1.1,disk2.1 ext2 rw,noatime
 raid1   -      disk1.2,disk2.2 -    -
+raid1   -      disk1.3,disk2.3 -    -
 
 disk_config cryptsetup
 luks - /dev/md1 - -
+luks - /dev/md2 - -
 
 disk_config lvm
 vg Base md1
