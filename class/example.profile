@@ -1,4 +1,10 @@
-Default: Xfce
+Default: Crypto
+
+Name: Crypto
+Description: Profile based on simple with encrypted HD on raid and lvm.
+Short: Profile based on simple with encrypted HD on raid and lvm.
+Long: This is a demo of a simple profile with crypto on HD.
+Classes: INSTALL FAIBASE DEBIAN DEMO RAID_CRYPTO_LVM
 
 Name: Simple
 Description: My first FAI installation
