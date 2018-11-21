@@ -1,0 +1,7 @@
+# les packages de base pour les serveurs de Koumbit
+# le kit RAID_CRYPTO_LVM, on le gère les outils dans le fichier RAID_CRYPTO_LVM
+
+# les packages sans les recommends
+PACKAGES install-norec
+htop iotop nmon
+tmux
