@@ -4,7 +4,7 @@ Name: Crypto
 Description: Profile based on simple with encrypted HD on raid and lvm.
 Short: Profile based on simple with encrypted HD on raid and lvm.
 Long: This is a demo of a simple profile with crypto on HD.
-Classes: INSTALL DEBIAN DEMO RAID_CRYPTO_LVM K_SERVER SERIAL
+Classes: INSTALL DEBIAN RAID_CRYPTO_LVM K_SERVER SERIAL
 
 Name: Simple
 Description: My first FAI installation
