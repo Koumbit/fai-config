@@ -1,0 +1,7 @@
+# les packages de base pour le setup RAID_CRYPTO_LVM
+
+# les packages sans les recommends
+PACKAGES install-norec
+cryptsetup
+mdadm
+lvm2
