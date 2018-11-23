@@ -10,6 +10,8 @@ UTC=yes
 
 # the hash of the root password for the new installed linux system
 # pw is "fai"
+# Note, it's not possible to log with ssh on the root account by default
+# so this password is useful for local access (tty0 or ttyS0)
 ROOTPW='$1$kBnWcO.E$djxB128U7dMkrltJHPf6d1'
 
 # errors in tasks greater than this value will cause the installation to stop
