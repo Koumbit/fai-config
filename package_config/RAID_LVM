@@ -1,0 +1,6 @@
+# les packages de base pour le setup RAID_LVM
+
+# les packages sans les recommends
+PACKAGES install-norec
+mdadm
+lvm2
