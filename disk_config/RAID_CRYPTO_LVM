@@ -1,7 +1,7 @@
-# Disks: 2x 20GB (TEST)
+# Disks: 2x from 20GB to >2TB gpt-bios needed!
 # Configuration: RAID1+CRYPTO+LVM
 
-disk_config disk1 disklabel:msdos bootable:1 fstabkey:uuid
+disk_config disk1 disklabel:gpt-bios bootable:1 fstabkey:uuid
 primary -      1G      -     -
 primary -      15G      -     -
 primary -      2G-     -     -
