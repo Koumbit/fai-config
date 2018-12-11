@@ -1,7 +1,8 @@
 # Disks: 2x 20GB (TEST)
 # Configuration: RAID1+LVM
 
-disk_config disk1 disklabel:msdos bootable:1 fstabkey:uuid
+disk_config disk1 disklabel:gpt bootable:1 fstabkey:uuid
+primary /boot/efi 200 vfat rw
 primary -      1G      -     -
 primary -      15G      -     -
 primary -      2G-     -     -
@@ -9,9 +10,9 @@ primary -      2G-     -     -
 disk_config disk2 sameas:disk1
 
 disk_config raid
-raid1   /boot  disk1.1,disk2.1 ext2 rw,noatime
-raid1   -      disk1.2,disk2.2 -    -
+raid1   /boot  disk1.2,disk2.2 ext2 rw,noatime
 raid1   -      disk1.3,disk2.3 -    -
+raid1   -      disk1.4,disk2.4 -    -
 
 disk_config lvm
 vg root md1
