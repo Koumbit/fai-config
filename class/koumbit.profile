@@ -6,13 +6,14 @@ Short: Profile based on simple with encrypted HD on raid and lvm.
 Long: This is a demo of a simple profile with crypto on HD.
 Classes: INSTALL DEBIAN RAID_CRYPTO_LVM K_SERVER SERIAL
 
-Name: Simple
-Description: My first FAI installation
-Short: just a very simple example, no xorg, an account called demo
-Long: This is the demohost example of FAI.
-Additional account called demo with password: fai, root password: fai
-All needed packages are already on the CD or USB stick.
-Classes: INSTALL FAIBASE DEBIAN DEMO
+Name: Raid-LVM
+Description: Server with raid+lvm (without crypto)
+Short: To install server with 3 array raid1 with lvm (host+data)
+Long: This is to install a server with 2 discs in raid1, partitionned
+with 3 arrays for /boot, vg:root, vg:data, with Debian Stretch.
+For server where we don't have a serial console to enter crypto
+passphrase.
+Classes: INSTALL DEBIAN RAID_LVM K_SERVER SERIAL
 
 Name: Xfce
 Description: Xfce desktop, LVM partitioning
