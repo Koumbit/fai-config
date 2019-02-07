@@ -1,19 +1,25 @@
-Default: Crypto
+Default: D9-crypto-serial
 
-Name: Crypto
-Description: Profile based on simple with encrypted HD on raid and lvm.
-Short: Profile based on simple with encrypted HD on raid and lvm.
-Long: This is a demo of a simple profile with crypto on HD.
+Name: D9-crypto-serial
+Description: Debian 9 with crypto-raid-lvm
+Short: Install Debian 9 with encrypted HD on raid and lvm.
+Long: Install Debian 9 with encrypted HD on raid and lvm.
 Classes: INSTALL DEBIAN RAID_CRYPTO_LVM K_SERVER SERIAL
 
-Name: Raid-LVM
-Description: Server with raid+lvm (without crypto)
-Short: To install server with 3 array raid1 with lvm (host+data)
+Name: D9-Raid-LVM
+Description: Debian 9 with raid+lvm cryptoless
+Short: To install server with 3 array in raid1 with 2 vg (root+data)
 Long: This is to install a server with 2 discs in raid1, partitionned
 with 3 arrays for /boot, vg:root, vg:data, with Debian Stretch.
 For server where we don't have a serial console to enter crypto
 passphrase.
 Classes: INSTALL DEBIAN RAID_LVM K_SERVER SERIAL
+
+Name: D8-crypto-serial
+Description: Debian 8 with crypto-raid-lvm.
+Short: Install Debian 8 with encrypted HD on raid and lvm.
+Long: Install Debian 8 with encrypted HD on raid and lvm.
+Classes: INSTALL DEBIAN RAID_CRYPTO_LVM K_SERVER SERIAL JESSIE64
 
 Name: Xfce
 Description: Xfce desktop, LVM partitioning

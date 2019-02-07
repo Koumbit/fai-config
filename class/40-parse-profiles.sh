@@ -144,10 +144,10 @@ unset i
 
 while true; do
 
-    dialog --clear --item-help --title "FAI - Fully Automatic Installation" --help-button \
+    TERM=vt100 dialog --clear --item-help --title "FAI - Fully Automatic Installation" --help-button \
 	--default-item "$default" \
 	--menu "\nSelect your FAI profile\n\nThe profile will define a list of classes,\nwhich are used by FAI.\n\n\n"\
-	15 70 0 "${par[@]}" 2> $tempfile
+	15 70 0 "${par[@]}" 2> $tempfile 1> $out
 
     _retval=$?
     case $_retval in
@@ -158,7 +158,7 @@ while true; do
 	    echo "No profile selected."
 	    break ;;
 	2)
-	    dialog --title "Description of all profiles" --textbox $tempfile2 0 0 1> $out;;
+	    TERM=vt100 dialog --title "Description of all profiles" --textbox $tempfile2 0 0 1> $out;;
     esac
 
 done
