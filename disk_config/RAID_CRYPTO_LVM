@@ -3,7 +3,7 @@
 
 disk_config disk1 disklabel:gpt-bios bootable:1 fstabkey:uuid
 primary -      1G      -     -
-primary -      15G      -     -
+primary -      17G      -     -
 primary -      2G-     -     -
 
 disk_config disk2 sameas:disk1
@@ -19,6 +19,6 @@ luks:"secret" - /dev/md2 - -
 
 disk_config lvm
 vg root md1
-root-swap   swap   1G    swap sw
+root-swap   swap   3G    swap sw
 root-slash   /      13G   ext4 rw,noatime
 vg data md2
