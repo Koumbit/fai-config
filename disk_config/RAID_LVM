@@ -1,9 +1,9 @@
-# Disks: 2x from 20GB to >2TB gpt-bios needed!
+# Disks: 2x from 40GB to >2TB gpt-bios needed!
 # Configuration: RAID1+LVM
 
 disk_config disk1 disklabel:gpt-bios bootable:1 fstabkey:uuid
 primary -      1G      -     -
-primary -      15G      -     -
+primary -      35G      -     -
 primary -      2G-     -     -
 
 disk_config disk2 sameas:disk1
@@ -15,6 +15,6 @@ raid1   -      disk1.3,disk2.3 -    -
 
 disk_config lvm
 vg root md1
-root-swap   swap   1G    swap sw
-root-slash   /      13G   ext4 rw,noatime
+root-swap   swap   8G    swap sw
+root-slash   /      25G   ext4 rw,noatime
 vg data md2
