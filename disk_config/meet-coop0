@@ -1,0 +1,38 @@
+# Disks: 2x from 40GB to >2TB gpt-bios needed!
+# Configuration: RAID1+CRYPTO+LVM
+# ICI, on a un setup un peu special de disque
+# sda et sdb sont les gros disques et sdc et sdd sont plus performant.
+
+disk_config disk1 disklabel:gpt-bios bootable:1 fstabkey:uuid
+primary -      2G      -     -
+primary -      2G-     -     -
+
+disk_config disk2 sameas:disk1
+
+disk_config disk3 disklabel:gpt-bios bootable:1 fstabkey:uuid
+primary -      1G      -     -
+primary -      35G      -     -
+primary -      2G-     -     -
+
+disk_config disk4 sameas:disk3
+
+disk_config raid
+raid1   /boot  disk3.1,disk4.1 ext2 rw,noatime
+raid1   -      disk3.2,disk4.2 -    -
+raid1   -      disk3.3,disk4.3 -    -
+raid1   -      disk1.1,disk2.1 -    -
+raid1   -      disk1.2,disk2.2 -    -
+
+
+disk_config cryptsetup
+luks:"secret" - /dev/md1 - -
+luks:"secret" - /dev/md2 - -
+luks:"secret" - /dev/md3 - -
+luks:"secret" - /dev/md4 - -
+
+disk_config lvm
+vg root md1
+root-swap   swap   8G   swap sw
+root-slash  /     25G   ext4 rw,noatime,errors=remount-ro createopts="-O ^metadata_csum"
+vg data md2
+vg data2 md4
