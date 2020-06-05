@@ -36,6 +36,14 @@ Short: Install Debian 8 with encrypted HD on raid and lvm.
 Long: Install Debian 8 with encrypted HD on raid and lvm.
 Classes: INSTALL DEBIAN RAID_CRYPTO_LVM K_SERVER SERIAL JESSIE64
 
+Name: U1604-crypto-serial
+Description: Ubuntu 16.04 with crypto-raid-lvm on serial
+Short: Install Ubuntu 16.04 with encrypted HD on raid and lvm.
+Long: We use the Debian nfsroot for installing the Ubuntu OS.
+You should have a fast network connection, because most packages are
+downloaded from the internet.
+Classes: INSTALL DEBIAN UBUNTU_PACKAGES RAID_CRYPTO_LVM K_SERVER SERIAL XENIAL64
+
 Name: Xfce
 Description: Xfce desktop, LVM partitioning
 Short: A fancy Xfce desktop will be installed, the user account is demo
@@ -60,14 +68,6 @@ Long: We use the Debian nfsroot for installing the CentOS 7 OS.
 You should have a fast network connection, because most packages are
 downloaded from the internet.
 Classes: INSTALL FAIBASE CENTOS CENTOS7_64 XORG
-
-Name: Ubuntu
-Description: Ubuntu 18.04 desktop installation
-Short: Unity desktop
-Long: We use the Debian nfsroot for installing the Ubuntu OS.
-You should have a fast network connection, because most packages are
-downloaded from the internet.
-Classes: INSTALL FAIBASE DEMO DEBIAN UBUNTU BIONIC BIONIC64 XORG
 
 Name: Inventory
 Description: Show hardware info
