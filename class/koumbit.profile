@@ -6,6 +6,12 @@ Short: Install Debian 10 with encrypted HD on raid and lvm.
 Long: Install Debian 10 with encrypted HD on raid and lvm.
 Classes: INSTALL DEBIAN RAID_CRYPTO_LVM K_SERVER SERIAL BUSTER64
 
+Name: D10-crypto-serial
+Description: Debian 10 with lvm on serial
+Short: Install Debian 10 with HD lvm.
+Long: Install Debian 10 with lvm.
+Classes: INSTALL DEBIAN LVM K_SERVER SERIAL BUSTER64
+
 Name: D10-raid-lvm
 Description: Debian 10 with raid+lvm cryptoless
 Short: To install server with 3 array in raid1 with 2 vg (root+data)
