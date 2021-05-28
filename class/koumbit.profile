@@ -6,7 +6,7 @@ Short: Install Debian 10 with encrypted HD on raid and lvm.
 Long: Install Debian 10 with encrypted HD on raid and lvm.
 Classes: INSTALL DEBIAN RAID_CRYPTO_LVM K_SERVER SERIAL BUSTER64
 
-Name: D10-crypto-serial
+Name: D10-lvm-serial
 Description: Debian 10 with lvm on serial
 Short: Install Debian 10 with HD lvm.
 Long: Install Debian 10 with lvm.
