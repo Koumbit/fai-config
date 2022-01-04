@@ -3,8 +3,6 @@
 # (c) Thomas Lange, 2006,2009, lange@debian.org
 # create entries for removable media in fstab and directories in /media
 
-[ -b $target/dev/fd0 ] && ainsl /etc/fstab "/dev/fd0  /media/floppy  auto  users,noauto 0 0"
-
 cdromlist() {
     [ -f /proc/sys/dev/cdrom/info ] || return
     devs=$(grep 'drive name:' /proc/sys/dev/cdrom/info | cut -d ":" -f 2)
@@ -23,5 +21,5 @@ for cdrom in $(cdromlist | tac); do
     [ $i -eq 0 ] && ln -sfn cdrom0 $target/media/cdrom
     mkdir -p $target/media/cdrom$i
     fstabline /dev/$cdrom /media/cdrom$i udf,iso9660 ro,user,noauto 0 0
-    i=$(($i + 1))
+    i=$((i + 1))
 done

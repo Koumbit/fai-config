@@ -4,7 +4,5 @@ firefox-esr
 #thunderbird
 menu gdm3
 gnome-core
-gconf-editor
 gnome-screensaver gnome-system-monitor gnome-system-tools
-libgnomevfs2-bin
 network-manager-gnome

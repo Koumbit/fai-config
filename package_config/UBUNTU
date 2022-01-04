@@ -14,3 +14,4 @@ grub-pc
 
 PACKAGES install
 ubuntu-minimal
+ubuntu-server

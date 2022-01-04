@@ -33,7 +33,7 @@ if [ ! -f $target/etc/machine-id ]; then
     > $target/etc/machine-id
 fi
 # recreate machine-id if the file is empty
-if [ X"$(stat -c '%s' $target/etc/machine-id 2>/dev/null)"  = X0 -a -f /bin/systemd-machine-id-setup ]; then
+if [ X"$(stat -c '%s' $target/etc/machine-id 2>/dev/null)"  = X0 -a -f $target/bin/systemd-machine-id-setup ]; then
     $ROOTCMD systemd-machine-id-setup
 fi
 
@@ -42,8 +42,9 @@ ln -fs /proc/mounts $target/etc/mtab
 rm -f $target/etc/dpkg/dpkg.cfg.d/fai $target/etc/dpkg/dpkg.cfg.d/unsafe-io
 
 if [ -d /etc/fai ]; then
-    ainsl -a /etc/fai/fai.conf "FAI_CONFIG_SRC=$FAI_CONFIG_SRC"
-    fcopy -Miv /etc/fai/fai.conf
+    if ! fcopy -Mv /etc/fai/fai.conf; then
+	ainsl -a /etc/fai/fai.conf "FAI_CONFIG_SRC=$FAI_CONFIG_SRC"
+    fi
 fi
 fcopy -iv /etc/rc.local
 
