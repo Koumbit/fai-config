@@ -3,5 +3,7 @@
 # les packages sans les recommends
 PACKAGES install-norec
 cryptsetup
+# Debian Buster and more recent
+cryptsetup-initramfs
 mdadm
 lvm2
