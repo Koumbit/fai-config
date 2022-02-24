@@ -1,0 +1,4 @@
+# DEBIAN /srv/fai/config/files/etc/apt/sources.list
+deb {%apt_cdn%}/debian bullseye main contrib non-free
+deb {%security_cdn%}/debian-security bullseye/updates main contrib non-free
+deb {%apt_cdn%}/debian bullseye-updates main contrib non-free
