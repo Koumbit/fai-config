@@ -1,0 +1,15 @@
+# Disks: 2x from 40GB to >2TB gpt-bios needed!
+# Configuration: RAID1+CRYPTO+LVM
+
+disk_config disk1 disklabel:gpt-bios bootable:1 fstabkey:uuid
+primary /boot      1G      ext4    rw,noatime
+# We use a large 2nd partition for the root vg since
+# VMs may occupy a fair amount on space on the root device.
+# Minimum disk size: ~128G
+primary -      120G-      -     -
+
+disk_config lvm
+vg root disk1.2
+root-swap   swap   8G   swap sw
+root-slash  /     25G-   ext4 rw,noatime
+

@@ -21,6 +21,12 @@ For server where we don't have a serial console to enter crypto
 passphrase.
 Classes: INSTALL DEBIAN RAID_LVM K_SERVER SERIAL BULLSEYE64
 
+Name: D11-desktop
+Description: Debian 11 Desktop with LVM
+Short: To install a desktop with LVM
+Long: To install a desktop in Debian 11 (bullseye) with LVM
+Classes: INSTALL DEBIAN LVM_DESKTOP BULLSEYE64 XORG GNOME
+
 Name: D12-crypto-serial
 Description: Debian 12 Bookworm with crypto-raid-lvm on serial
 Short: Install Debian 12 Bookworm with encrypted HD on raid and lvm.
