@@ -48,6 +48,27 @@ For server where we don't have a serial console to enter crypto
 passphrase.
 Classes: INSTALL DEBIAN RAID_LVM K_SERVER SERIAL BOOKWORM64
 
+Name: D13-crypto-serial                                                     
+Description: Debian 13 Trixie with crypto-raid-lvm on serial
+Short: Install Debian 13 Trixie with encrypted HD on raid and lvm.
+Long: Install Debian 13 Trixie with encrypted HD on raid and lvm.
+Classes: INSTALL DEBIAN RAID_CRYPTO_LVM K_SERVER SERIAL TRIXIE64
+                                                                            
+Name: D13-lvm-serial
+Description: Debian 13 Trixie with lvm on serial
+Short: Install Debian 13 Trixie with HD lvm.
+Long: Install Debian 13 Trixie with lvm.     
+Classes: INSTALL DEBIAN LVM K_SERVER SERIAL TRIXIE64 
+
+Name: D13-raid-lvm                                                                                                                
+Description: Debian 13 Trixie with raid+lvm cryptoless
+Short: To install server with 3 array in raid1 with 2 vg (root+data)
+Long: This is to install a server with 2 discs in raid1, partitionned
+with 3 arrays for /boot, vg:root, vg:data, with Debian 13 Trixie.
+For server where we don't have a serial console to enter crypto
+passphrase.
+Classes: INSTALL DEBIAN RAID_LVM K_SERVER SERIAL TRIXIE64
+
 Name: D10-crypto-serial
 Description: Debian 10 with crypto-raid-lvm on serial
 Short: Install Debian 10 with encrypted HD on raid and lvm.
